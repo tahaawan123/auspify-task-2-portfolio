@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6366f1" />
+
+  <!-- ===== SEO ===== -->
+  <title>Muhammad Taha — Full Stack &amp; AI Developer</title>
+  <meta name="description"
+    content="Portfolio of Muhammad Taha, a Full Stack &amp; AI Developer specializing in Next.js, React, Python, Sanity CMS and Agentic AI. Explore 15+ projects across web development and AI." />
+  <meta name="author" content="Muhammad Taha" />
+  <meta name="keywords" content="Muhammad Taha, Full Stack Developer, AI Developer, Next.js, React, Python, Agentic AI, Streamlit, Portfolio" />
+
+  <!-- ===== Open Graph / Social ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Muhammad Taha — Full Stack &amp; AI Developer" />
+  <meta property="og:description"
+    content="I build intuitive, responsive web applications with Next.js, React, Python and Agentic AI." />
+  <meta property="og:url" content="https://github.com/tahaawan123" />
+  <meta property="og:image" content="assets/img/profile.jpg" />
+  <meta property="og:site_name" content="Muhammad Taha Portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Muhammad Taha — Full Stack &amp; AI Developer" />
+  <meta name="twitter:description"
+    content="I build intuitive, responsive web applications with Next.js, React, Python and Agentic AI." />
+
+  <!-- ===== Favicon (inline SVG data URI, no external files) ===== -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Ctext x='32' y='44' font-family='system-ui,Segoe UI,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EMT%3C/text%3E%3C/svg%3E" />
+
+  <!-- ===== Styles ===== -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Apply the saved theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      /* Signals that JS is available, so scroll-reveal styles only hide content
+         when there is JavaScript to reveal it again. */
+      document.documentElement.classList.add('js');
+      try {
+        var saved = localStorage.getItem('portfolio-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      } catch (e) {
+        /* localStorage unavailable — keep the default light theme */
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- ===== Skip to content (accessibility) ===== -->
+  <a class="skip-link" href="#home">Skip to main content</a>
+
+  <!-- ============================================================
+       HEADER / NAVBAR
+       ============================================================ -->
+  <header class="header" id="header">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="navbar__brand" href="#home" aria-label="Muhammad Taha — home">
+        <span class="navbar__brand-mark" aria-hidden="true">MT</span>
+        <span class="navbar__brand-text">Muhammad Taha</span>
+      </a>
+
+      <div class="navbar__controls">
+        <button class="theme-toggle" id="themeToggle" type="button"
+          aria-label="Switch to dark theme" title="Toggle theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" width="20" height="20"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" width="20" height="20"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile hamburger -->
+        <button class="navbar__toggle" id="navToggle" type="button"
+          aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="navbar__toggle-bar" aria-hidden="true"></span>
+          <span class="navbar__toggle-bar" aria-hidden="true"></span>
+          <span class="navbar__toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="navbar__menu" id="navMenu">
+        <ul class="navbar__list">
+          <li><a class="navbar__link is-active" href="#home">Home</a></li>
+          <li><a class="navbar__link" href="#about">About</a></li>
+          <li><a class="navbar__link" href="#projects">Projects</a></li>
+          <li><a class="navbar__link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         SECTION: HOME / HERO
+         ============================================================ -->
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">
+            <span class="hero__status-dot" aria-hidden="true"></span>
+            Available for opportunities
+          </p>
+
+          <h1 class="hero__title" id="hero-title">
+            Hi, I'm <span class="text-gradient">Muhammad Taha</span>
+          </h1>
+
+          <p class="hero__role">
+            <!-- The animated text is decorative for screen readers; the static
+                 line below is what assistive tech actually announces. -->
+            <span class="visually-hidden">Roles: Full Stack Developer, AI Developer, Agentic AI Builder.</span>
+            <span aria-hidden="true" class="hero__role-static">I'm a</span>
+            <span aria-hidden="true" class="hero__typed" id="typedRole">Full Stack Developer</span><span
+              aria-hidden="true" class="hero__caret"></span>
+          </p>
+
+          <p class="hero__text">
+            I specialize in building intuitive and responsive web applications using modern technologies.
+            Skilled in Next.js, React, Python, and Agentic AI, I aim to deliver seamless user experiences
+            with clean design and smart functionality.
+          </p>
+
+          <ul class="hero__tags" aria-label="Core technologies">
+            <li class="tag">Next.js</li>
+            <li class="tag">React</li>
+            <li class="tag">Python</li>
+            <li class="tag">Agentic AI</li>
+          </ul>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="assets/Taha-Resume.pdf" download>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v12"></path>
+                <path d="m7 12 5 5 5-5"></path>
+                <path d="M5 21h14"></path>
+              </svg>
+              Download CV
+            </a>
+
+            <a class="btn btn--ghost" href="https://github.com/tahaawan123" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1a2.9 2.9 0 0 1 .9-1.9c-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.2-3.2 4.4 4.4 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.4 4.4 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6a3.2 3.2 0 0 1 .9 2.4v3.5c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"></path>
+              </svg>
+              GitHub
+            </a>
+
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/muhammad-taha-4735912b6/"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+
+          <!-- Animated stat counters -->
+          <ul class="stats" aria-label="Key statistics">
+            <li class="stats__item">
+              <span class="stats__value" data-count-to="15" data-suffix="+">0+</span>
+              <span class="stats__label">Projects Completed</span>
+            </li>
+            <li class="stats__item">
+              <span class="stats__value" data-count-to="3" data-suffix="+">0+</span>
+              <span class="stats__label">Years of Learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Profile photo with graceful fallback to an initials placeholder -->
+        <div class="hero__media reveal">
+          <div class="profile" id="profileCard">
+            <span class="profile__initials" aria-hidden="true">MT</span>
+            <img class="profile__img" id="profileImg" src="assets/img/profile.jpg"
+              alt="Portrait of Muhammad Taha" width="420" height="420" loading="lazy" decoding="async" />
+            <span class="profile__ring" aria-hidden="true"></span>
+          </div>
+          <div class="hero__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"></path>
+            </svg>
+            Agentic AI Builder
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION: ABOUT
+         ============================================================ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">Get to know me</p>
+          <h2 class="section__title" id="about-title">About Me</h2>
+          <p class="section__subtitle">
+            A developer who enjoys turning ideas into fast, accessible and intelligent products.
+          </p>
+        </header>
+
+        <div class="about">
+          <div class="about__bio reveal">
+            <h3 class="about__heading">Who I am</h3>
+            <p>
+              I am Muhammad Taha, a passionate Full Stack Developer and AI enthusiast. I specialize in
+              building dynamic web applications, integrating Sanity CMS, creating Python-based apps with
+              Streamlit, and developing AI-powered agents and chatbots using Agentic AI and Chainlit.
+            </p>
+
+            <h3 class="about__heading">My goal</h3>
+            <p>
+              My goal is to advance in the field of Artificial Intelligence, focusing on autonomous agents,
+              intelligent systems, and AI-driven solutions. I aim to become a leading developer in AI-powered
+              web solutions and autonomous agents.
+            </p>
+
+            <h3 class="about__heading">Education</h3>
+            <ul class="timeline">
+              <li class="timeline__item">
+                <span class="timeline__dot" aria-hidden="true"></span>
+                <div>
+                  <p class="timeline__title">BSc — Khairpur University</p>
+                  <p class="timeline__meta">Graduated 2024</p>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__dot" aria-hidden="true"></span>
+                <div>
+                  <p class="timeline__title">Advanced Agentic AI &amp; AI integration</p>
+                  <p class="timeline__meta">Currently learning</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skills grouped by discipline -->
+          <div class="about__skills reveal">
+            <h3 class="about__heading">Skills &amp; Technologies</h3>
+
+            <div class="skill-group">
+              <p class="skill-group__label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m8 6-6 6 6 6"></path>
+                  <path d="m16 6 6 6-6 6"></path>
+                </svg>
+                Frontend
+              </p>
+              <ul class="chips">
+                <li class="chip">HTML5</li>
+                <li class="chip">CSS3</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">TypeScript</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">Next.js</li>
+                <li class="chip">ShadCN UI</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <p class="skill-group__label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <ellipse cx="12" cy="5.5" rx="8" ry="3"></ellipse>
+                  <path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13"></path>
+                  <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path>
+                </svg>
+                Backend &amp; APIs
+              </p>
+              <ul class="chips">
+                <li class="chip">Node.js</li>
+                <li class="chip">Sanity CMS</li>
+                <li class="chip">Custom APIs</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <p class="skill-group__label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3a9 9 0 1 0 9 9"></path>
+                  <path d="M12 3v9l6.4 6.4"></path>
+                </svg>
+                Python
+              </p>
+              <ul class="chips">
+                <li class="chip">Streamlit apps</li>
+                <li class="chip">Automation</li>
+                <li class="chip">Data-driven solutions</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <p class="skill-group__label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="4" y="7" width="16" height="12" rx="3"></rect>
+                  <path d="M12 7V3"></path>
+                  <circle cx="9" cy="13" r="1.2" fill="currentColor"></circle>
+                  <circle cx="15" cy="13" r="1.2" fill="currentColor"></circle>
+                </svg>
+                AI &amp; Agents
+              </p>
+              <ul class="chips">
+                <li class="chip">Agentic AI</li>
+                <li class="chip">Chainlit chatbots</li>
+                <li class="chip">Autonomous agents</li>
+                <li class="chip">Prompt Engineering</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <header class="section__head section__head--inner reveal">
+          <h3 class="section__title section__title--sm" id="services-title">What I Do</h3>
+          <p class="section__subtitle">Services I can help you with, from interface to intelligence.</p>
+        </header>
+
+        <ul class="services" aria-labelledby="services-title">
+          <li class="card service reveal">
+            <span class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m5 8 7-5 7 5v8l-7 5-7-5V8z"></path>
+                <path d="M12 3v18"></path>
+              </svg>
+            </span>
+            <h4 class="service__title">Next.js Development</h4>
+            <p class="service__text">Fast, SEO-friendly React applications with routing, server rendering and clean architecture.</p>
+          </li>
+
+          <li class="card service reveal">
+            <span class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20c3-10 8-14 16-16-2 8-6 13-16 16z"></path>
+                <path d="M4 20c2-4 5-7 9-9"></path>
+              </svg>
+            </span>
+            <h4 class="service__title">Tailwind CSS Styling</h4>
+            <p class="service__text">Pixel-accurate, responsive interfaces built with a consistent design system and utility classes.</p>
+          </li>
+
+          <li class="card service reveal">
+            <span class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 8-5 4 5 4"></path>
+                <path d="m15 8 5 4-5 4"></path>
+              </svg>
+            </span>
+            <h4 class="service__title">Python Backend &amp; Streamlit Apps</h4>
+            <p class="service__text">Data-driven Python tools, automation scripts and interactive Streamlit dashboards.</p>
+          </li>
+
+          <li class="card service reveal">
+            <span class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="3"></rect>
+                <path d="M3 9h18"></path>
+                <path d="M8 14h5"></path>
+              </svg>
+            </span>
+            <h4 class="service__title">Sanity CMS Integration</h4>
+            <p class="service__text">Structured content models and headless CMS setups so you can edit content without touching code.</p>
+          </li>
+
+          <li class="card service reveal">
+            <span class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="7" width="16" height="12" rx="3"></rect>
+                <path d="M12 7V3"></path>
+                <circle cx="9" cy="13" r="1.2" fill="currentColor"></circle>
+                <circle cx="15" cy="13" r="1.2" fill="currentColor"></circle>
+              </svg>
+            </span>
+            <h4 class="service__title">Agentic AI Solutions</h4>
+            <p class="service__text">Autonomous agents, Chainlit chatbots and prompt-engineered assistants that actually get work done.</p>
+          </li>
+
+          <li class="card service reveal">
+            <span class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"></path>
+              </svg>
+            </span>
+            <h4 class="service__title">Performance &amp; SEO Optimization</h4>
+            <p class="service__text">Core Web Vitals, semantic markup and technical SEO so your site ranks and loads fast.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION: PROJECTS
+         ============================================================ -->
+    <section class="section section--muted" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">Recent work</p>
+          <h2 class="section__title" id="projects-title">Projects</h2>
+          <p class="section__subtitle">
+            A selection of web applications and Python / AI tools I have built and deployed.
+          </p>
+        </header>
+
+        <!-- Category filters -->
+        <div class="filters reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter" type="button" data-filter="python-ai" aria-pressed="false">Python &amp; AI</button>
+        </div>
+
+        <!-- Cards are rendered by js/script.js -->
+        <p class="visually-hidden" id="projectsCount" role="status"></p>
+        <ul class="projects" id="projectsGrid"></ul>
+        <p class="projects__empty" id="projectsEmpty" hidden>No projects found in this category.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION: CONTACT
+         ============================================================ -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">Let's talk</p>
+          <h2 class="section__title" id="contact-title">Get In Touch</h2>
+          <p class="section__subtitle">
+            Have a project, a role, or an idea worth building? Send me a message — I usually reply within a day.
+          </p>
+        </header>
+
+        <div class="contact">
+          <!-- Contact details -->
+          <div class="contact__info reveal">
+            <ul class="contact-list">
+              <li class="contact-item">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+                    <path d="m4 7 8 6 8-6"></path>
+                  </svg>
+                </span>
+                <div class="contact-item__body">
+                  <p class="contact-item__label">Email</p>
+                  <a class="contact-item__value" href="mailto:tahaawan598@gmail.com">tahaawan598@gmail.com</a>
+                </div>
+                <button class="copy-btn" type="button" data-copy="tahaawan598@gmail.com"
+                  aria-label="Copy email address to clipboard">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="12" height="12" rx="2.5"></rect>
+                    <path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </li>
+
+              <li class="contact-item">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path>
+                  </svg>
+                </span>
+                <div class="contact-item__body">
+                  <p class="contact-item__label">Phone</p>
+                  <a class="contact-item__value" href="tel:+923082520161">+92 308 2520161</a>
+                </div>
+                <button class="copy-btn" type="button" data-copy="+92 308 2520161"
+                  aria-label="Copy phone number to clipboard">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="12" height="12" rx="2.5"></rect>
+                    <path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </li>
+
+              <li class="contact-item">
+                <span class="contact-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"></path>
+                    <circle cx="12" cy="10" r="2.6"></circle>
+                  </svg>
+                </span>
+                <div class="contact-item__body">
+                  <p class="contact-item__label">Location</p>
+                  <p class="contact-item__value">Karachi, Pakistan</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact__note">
+              <p><strong>Prefer a quick chat?</strong> Reach out on LinkedIn — I'm happy to talk about web
+                development, AI agents or collaboration.</p>
+              <a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/in/muhammad-taha-4735912b6/"
+                target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <form class="form card reveal" id="contactForm" novalidate>
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="name">Name <span aria-hidden="true">*</span></label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Your full name"
+                  autocomplete="name" required aria-describedby="nameError" />
+                <p class="form__error" id="nameError" role="alert"></p>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="email">Email <span aria-hidden="true">*</span></label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="you@example.com"
+                  autocomplete="email" required aria-describedby="emailError" />
+                <p class="form__error" id="emailError" role="alert"></p>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="subject">Subject <span aria-hidden="true">*</span></label>
+              <input class="form__input" type="text" id="subject" name="subject"
+                placeholder="What is this about?" required aria-describedby="subjectError" />
+              <p class="form__error" id="subjectError" role="alert"></p>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea class="form__input form__textarea" id="message" name="message" rows="5"
+                placeholder="Tell me about your project (at least 20 characters)"
+                required aria-describedby="messageError messageHint"></textarea>
+              <p class="form__hint" id="messageHint"><span id="messageCount">0</span> / 20 characters minimum</p>
+              <p class="form__error" id="messageError" role="alert"></p>
+            </div>
+
+            <!-- Honeypot: hidden from users, catches naive spam bots -->
+            <div class="form__honeypot" aria-hidden="true">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button class="btn btn--primary btn--block" id="submitBtn" type="submit">
+              <span class="btn__spinner" aria-hidden="true"></span>
+              <span class="btn__label">Send Message</span>
+            </button>
+
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="navbar__brand" href="#home">
+          <span class="navbar__brand-mark" aria-hidden="true">MT</span>
+          <span class="navbar__brand-text">Muhammad Taha</span>
+        </a>
+        <p class="footer__tagline">Full Stack &amp; AI Developer — building smart, responsive web experiences.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Footer quick links">
+        <h2 class="footer__heading">Quick Links</h2>
+        <ul class="footer__list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h2 class="footer__heading">Connect</h2>
+        <ul class="footer__list">
+          <li>
+            <a href="https://github.com/tahaawan123" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1a2.9 2.9 0 0 1 .9-1.9c-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.2-3.2 4.4 4.4 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.4 4.4 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6a3.2 3.2 0 0 1 .9 2.4v3.5c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"></path>
+              </svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/muhammad-taha-4735912b6/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="mailto:tahaawan598@gmail.com">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+              Email
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>&copy; 2026 Muhammad Taha. All rights reserved.</p>
+      <p class="footer__credit">Built as Task 2 of the Auspify Technologies Web Development Internship.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5"></path>
+      <path d="m5 12 7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Data Sweeper project placeholder">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#brand)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <text x="400" y="226" text-anchor="middle" dominant-baseline="central"
+        font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace"
+        font-size="92" font-weight="700" letter-spacing="8"
+        fill="#ffffff" fill-opacity="0.96">DATA</text>
+  <text x="400" y="306" text-anchor="middle" dominant-baseline="central"
+        font-family="system-ui, 'Segoe UI', Roboto, sans-serif"
+        font-size="26" font-weight="600" letter-spacing="3"
+        fill="#ffffff" fill-opacity="0.82">Data Sweeper</text>
+</svg>
